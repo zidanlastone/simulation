@@ -1,0 +1,192 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link
+      href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="assets/jsons/users.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper" class="d-flex">
+      <!-- Sidebar -->
+      <div class="bg-light border-right" id="sidebar-wrapper">
+        <div class="sidebar-heading">Simulation</div>
+        <div class="list-group list-group-flush">
+          <div
+            id="list-group-item list-group-item-action bg-light"
+            style="height:100px; text-align: center;"
+          >
+            <i class="icon ion-md-contact" style="font-size: 56px"></i>
+            <h4>Admin</h4>
+          </div>
+          <a href="#" class="list-group-item list-group-item-action bg-light"
+            >Tambah User</a
+          >
+          <a href="#" class="list-group-item list-group-item-action bg-light"
+            >Tambah Data</a
+          >
+          <a href="#" class="list-group-item list-group-item-action bg-light"
+            >Edit / Hapus Data</a
+          >
+        </div>
+      </div>
+      <!-- /#sidebar-wrapper -->
+
+      <!-- Page Content -->
+      <div id="page-content-wrapper">
+        <nav
+          class="navbar navbar-expand-lg navbar-light bg-light border-bottom"
+        >
+          <button class="btn btn-primary" id="menu-toggle">
+            <i id="toggle-button" class="icon ion-md-arrow-dropleft"></i>
+          </button>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+              <li class="nav-item active"></li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="icon ion-md-contact" style="font-size: 26px"></i>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-right"
+                  aria-labelledby="navbarDropdown"
+                >
+                  <a class="dropdown-item" href="#">
+                    <i class="icon ion-md-options"></i>
+                    Setting Account</a
+                  >
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#"
+                    ><i class="icon ion-md-log-out"></i> logout</a
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="container-fluid">
+          <h1 class="mt-4">Daftar User</h1>
+
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Username</th>
+                    <th>Level</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="users">
+                  <tr>
+                    <td>1</td>
+                    <td>Manager</td>
+                    <td>MainManager</td>
+                    <td>Manager</td>
+                    <td>active</td>
+                    <td>
+                      <button class="btn btn-danger">
+                        <i class="icon ion-md-trash"></i>
+                      </button>
+                      <button class="btn btn-warning">
+                        <i class="icon ion-md-create"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Admin</td>
+                    <td>MainAdmin</td>
+                    <td>Admin</td>
+                    <td>active</td>
+                    <td>
+                      <button class="btn btn-danger">
+                        <i class="icon ion-md-trash"></i>
+                      </button>
+                      <button class="btn btn-warning">
+                        <i class="icon ion-md-create"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Kasir 1</td>
+                    <td>KasirPertama</td>
+                    <td>Kasir</td>
+                    <td>active</td>
+                    <td>
+                      <button class="btn btn-danger">
+                        <i class="icon ion-md-trash"></i>
+                      </button>
+                      <button class="btn btn-warning">
+                        <i class="icon ion-md-create"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Kasir 2</td>
+                    <td>KasirKedua</td>
+                    <td>Kasir</td>
+                    <td>not-active</td>
+                    <td>
+                      <button class="btn btn-danger">
+                        <i class="icon ion-md-trash"></i>
+                      </button>
+                      <button class="btn btn-warning">
+                        <i class="icon ion-md-create"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Javascripts -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
